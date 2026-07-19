@@ -1,0 +1,46 @@
+title: 바이브코딩 툴 설치 가이드
+description: Codex CLI, Antigravity CLI, Claude Code — 직접 설치하면서 기록한 가이드 모음입니다.
+
+theme: just-the-docs
+
+url: "https://tgoddessana.github.io"
+baseurl: "/vibecoding-tools-installation-guide"
+
+# ── Just the Docs 설정 ──────────────────────────────
+color_scheme: dark
+
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+heading_anchors: true
+nav_sort: order
+
+aux_links:
+  "GitHub ↗":
+    - "https://github.com/TGoddessana/vibecoding-tools-installation-guide"
+
+aux_links_new_tab: true
+
+footer_content: "© 2025 TGoddessana · <a href=\"https://github.com/TGoddessana/vibecoding-tools-installation-guide\">GitHub</a>"
+
+back_to_top: true
+back_to_top_text: "맨 위로"
+
+# ── 빌드 설정 ──────────────────────────────────────
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - "*.gemspec"
+  - "*.gem"
+  - node_modules
+  - vendor
