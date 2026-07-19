@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex CLI 설치 가이드 · Vibecoding Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <span class="icon">⚡</span>
+    Vibecoding Tools
+  </a>
+  <nav>
+    <a href="https://github.com/TGoddessana/vibecoding-tools-installation-guide" target="_blank">GitHub</a>
+  </nav>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">시작하기</div>
+      <a href="index.html">
+        <span class="dot" style="background:#58a6ff"></span>
+        소개
+      </a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">설치 가이드</div>
+      <a href="codex-cli.html" class="active">
+        <span class="dot" style="background:#4ade80"></span>
+        Codex CLI
+      </a>
+      <a href="antigravity-cli.html">
+        <span class="dot" style="background:#f472b6"></span>
+        Antigravity CLI
+      </a>
+      <a href="claude-code.html">
+        <span class="dot" style="background:#fb923c"></span>
+        Claude Code
+      </a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page-title">📦 Codex CLI</div>
+    <div class="page-subtitle">
+      OpenAI의 터미널 기반 AI 코딩 어시스턴트 — 명령줄에서 바로 AI와 함께 코딩하세요.
+    </div>
+
+    <h2>설치 영상</h2>
+    <!-- 영상을 직접 찍어서 아래 video-placeholder 자리에 넣어주세요 -->
+    <!-- YouTube embed 예시: <iframe width="100%" style="aspect-ratio:16/9;border-radius:12px;border:none;" src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe> -->
+    <!-- 로컬 영상 예시: <video controls style="width:100%;border-radius:12px;"><source src="videos/codex-cli-install.mp4" type="video/mp4"></video> -->
+    <div class="video-placeholder">
+      <div class="play-icon">▶</div>
+      <span>설치 영상을 여기에 추가하세요</span>
+      <span style="font-size:12px;">YouTube embed 또는 &lt;video&gt; 태그로 교체</span>
+    </div>
+
+    <h2>시스템 요구사항</h2>
+    <table class="req-table">
+      <thead>
+        <tr><th>항목</th><th>요구사항</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Node.js</td><td>22 이상</td></tr>
+        <tr><td>npm</td><td>8 이상 (Node.js 설치 시 포함)</td></tr>
+        <tr><td>OS</td><td>macOS, Linux, Windows (WSL 권장)</td></tr>
+        <tr><td>OpenAI API Key</td><td>필요 — <a href="https://platform.openai.com/api-keys" target="_blank">발급 페이지</a></td></tr>
+      </tbody>
+    </table>
+
+    <h2>설치 방법</h2>
+    <ol class="steps">
+      <li>
+        <div class="step-content">
+          <strong>Node.js 설치 확인</strong>
+          Node.js 22 이상이 설치되어 있는지 확인합니다.
+          <pre><code><span class="token-cmd">node</span> <span class="token-flag">--version</span>
+<span class="token-cmt"># v22.x.x 이상이어야 합니다</span>
+
+<span class="token-cmd">npm</span> <span class="token-flag">--version</span></code><span class="lang-label">shell</span></pre>
+          <div class="callout callout-tip">
+            <span class="callout-icon">💡</span>
+            <p>Node.js가 없다면 <a href="https://nodejs.org" target="_blank">nodejs.org</a> 에서 LTS 버전을 설치하거나, <code>nvm</code>을 사용하세요.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <strong>Codex CLI 전역 설치</strong>
+          npm으로 <code>@openai/codex</code> 패키지를 전역 설치합니다.
+          <pre><code><span class="token-cmd">npm</span> install <span class="token-flag">-g</span> <span class="token-str">@openai/codex</span></code><span class="lang-label">shell</span></pre>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <strong>API Key 환경변수 설정</strong>
+          OpenAI API Key를 환경변수로 등록합니다.
+          <pre><code><span class="token-cmt"># ~/.zshrc 또는 ~/.bashrc에 추가</span>
+<span class="token-kw">export</span> OPENAI_API_KEY=<span class="token-str">"sk-..."</span></code><span class="lang-label">shell</span></pre>
+          <pre><code><span class="token-cmt"># 즉시 적용</span>
+<span class="token-cmd">source</span> ~/.zshrc</code><span class="lang-label">shell</span></pre>
+          <div class="callout callout-warning">
+            <span class="callout-icon">⚠️</span>
+            <p>API Key는 절대 코드에 직접 넣지 마세요. 환경변수 또는 <code>.env</code> 파일을 사용하고, <code>.gitignore</code>에 추가하세요.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="step-content">
+          <strong>설치 확인 및 실행</strong>
+          설치가 완료되면 버전을 확인하고 실행해봅니다.
+          <pre><code><span class="token-cmd">codex</span> <span class="token-flag">--version</span>
+
+<span class="token-cmt"># 실행</span>
+<span class="token-cmd">codex</span></code><span class="lang-label">shell</span></pre>
+        </div>
+      </li>
+    </ol>
+
+    <h2>주요 사용법</h2>
+    <h3>기본 사용</h3>
+    <pre><code><span class="token-cmt"># 대화형 모드로 실행</span>
+<span class="token-cmd">codex</span>
+
+<span class="token-cmt"># 특정 프롬프트와 함께 실행</span>
+<span class="token-cmd">codex</span> <span class="token-str">"이 디렉토리의 파이썬 파일들을 분석해줘"</span></code><span class="lang-label">shell</span></pre>
+
+    <h3>자주 쓰는 옵션</h3>
+    <pre><code><span class="token-cmd">codex</span> <span class="token-flag">--model</span> <span class="token-str">o4-mini</span>     <span class="token-cmt"># 사용할 모델 지정</span>
+<span class="token-cmd">codex</span> <span class="token-flag">--approval-mode</span> <span class="token-str">auto</span>  <span class="token-cmt"># 자동 승인 모드</span>
+<span class="token-cmd">codex</span> <span class="token-flag">--help</span>              <span class="token-cmt"># 전체 옵션 보기</span></code><span class="lang-label">shell</span></pre>
+
+    <h2>참고 링크</h2>
+    <ul style="padding-left:20px;line-height:2;">
+      <li><a href="https://github.com/openai/codex" target="_blank">Codex CLI 공식 GitHub</a></li>
+      <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI API 문서</a></li>
+      <li><a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API Key 발급</a></li>
+    </ul>
+  </main>
+</div>
+
+<footer>
+  <span>© 2025 TGoddessana · Vibecoding Tools Installation Guide</span>
+  <a href="https://github.com/TGoddessana/vibecoding-tools-installation-guide" target="_blank">GitHub에서 보기</a>
+</footer>
+
+</body>
+</html>
