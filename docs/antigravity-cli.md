@@ -4,10 +4,10 @@ layout: default
 nav_order: 3
 ---
 
-# 🚀 Antigravity CLI
+# Antigravity CLI
 {: .no_toc }
 
-터미널에서 동작하는 AI 코딩 에이전트입니다. 자연어로 복잡한 개발 작업을 처리합니다.
+터미널에서 동작하는 AI 코딩 에이전트입니다.
 {: .fs-5 .fw-300 }
 
 ---
@@ -27,7 +27,7 @@ nav_order: 3
 <!-- 로컬 파일: <video controls width="100%"><source src="../assets/videos/antigravity-cli.mp4" type="video/mp4"></video> -->
 
 {: .highlight }
-> 🎬 설치 영상을 여기에 추가하세요.
+> 설치 영상을 여기에 추가하세요.
 
 ---
 

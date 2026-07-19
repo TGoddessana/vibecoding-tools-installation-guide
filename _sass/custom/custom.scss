@@ -1,0 +1,168 @@
+@import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+:root {
+  --surface-1: #0f172a;
+  --surface-2: #121f38;
+  --surface-3: #1b2b49;
+  --text-main: #dbe5ff;
+  --text-muted: #9fb0d0;
+  --accent: #78a9ff;
+  --accent-soft: #2e4f8f;
+  --gold-line: #c8b27a;
+}
+
+body {
+  font-family: "Pretendard Variable", "Noto Sans KR", "Segoe UI", sans-serif;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  background:
+    radial-gradient(circle at 10% -10%, rgba(120, 169, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 90% 0%, rgba(200, 178, 122, 0.12), transparent 40%),
+    linear-gradient(180deg, #0a0f1a 0%, #0b1322 45%, #0a0f1a 100%);
+}
+
+.site-title {
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+  letter-spacing: -0.02em;
+}
+
+.main-content h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.85rem;
+}
+
+.main-content h2 {
+  margin-top: 2.2rem;
+  border-bottom: 1px solid rgba(200, 178, 122, 0.35);
+  padding-bottom: 0.45rem;
+}
+
+.main-content p,
+.main-content li {
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.main-content a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.main-content a:hover {
+  color: #a8c7ff;
+}
+
+.search-input-wrap {
+  border: 1px solid rgba(120, 169, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+.search-result {
+  border: 1px solid rgba(120, 169, 255, 0.2);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.side-bar {
+  border-right: 1px solid rgba(120, 169, 255, 0.2);
+  background:
+    linear-gradient(180deg, rgba(10, 15, 26, 0.95), rgba(14, 22, 40, 0.95));
+}
+
+@media (min-width: 50rem) {
+  .side-bar {
+    width: 16.5rem;
+  }
+
+  .main {
+    margin-left: 16.5rem;
+  }
+}
+
+.site-nav .nav-list .nav-list-item .nav-list-expander {
+  color: var(--text-muted);
+}
+
+.main-content-wrap {
+  animation: page-fade 0.55s ease-out;
+}
+
+/* Use more horizontal space on wide displays without losing readability. */
+.main {
+  max-width: none;
+}
+
+.main-content-wrap {
+  max-width: 90rem;
+}
+
+.main-content {
+  max-width: 76rem;
+}
+
+.main-content table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(120, 169, 255, 0.25);
+}
+
+.main-content th {
+  background: rgba(46, 79, 143, 0.35);
+  color: #f3f6ff;
+}
+
+.main-content td {
+  background: rgba(18, 31, 56, 0.65);
+}
+
+.main-content pre,
+.main-content code {
+  border-radius: 8px;
+}
+
+.main-content .note {
+  border-left: 4px solid var(--gold-line);
+  background: rgba(200, 178, 122, 0.1);
+  border-radius: 10px;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 50rem) {
+  .main-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .main-content-wrap {
+    padding-top: 1.1rem;
+  }
+}
+
+@media (min-width: 100rem) {
+  .main-content-wrap {
+    max-width: 96rem;
+  }
+
+  .main-content {
+    max-width: 82rem;
+  }
+}

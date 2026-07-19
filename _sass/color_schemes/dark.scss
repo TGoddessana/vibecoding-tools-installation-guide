@@ -1,0 +1,23 @@
+// Premium dark palette for Just the Docs
+// This file overrides theme variables used by the built-in dark scheme.
+
+$body-background-color: #0a0f1a;
+$sidebar-color: #0e1628;
+$search-background-color: #111b31;
+$table-background-color: #0f182b;
+$code-background-color: #0d1526;
+
+$body-text-color: #dbe5ff;
+$body-heading-color: #f3f6ff;
+$nav-child-link-color: #aab9da;
+$link-color: #78a9ff;
+$btn-primary-color: #4c7dff;
+$base-button-color: #24334f;
+
+$border-color: #243451;
+$search-result-preview-color: #9caecc;
+$feedback-color: #5d7094;
+
+// Ensure code tokens remain readable on dark backgrounds.
+$code-linenumber-color: #7f90b3;
+$code-cursor-color: #dbe5ff;
